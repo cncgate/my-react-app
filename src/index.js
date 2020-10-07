@@ -9,7 +9,7 @@ const App = () => {
                 <img alt="avatar" />
             </a>
             <div className="content">
-                <a href="/" className="Author">
+                <a href="/" className="author">
                     Sam
                 </a>
                 <div className="metadata">
