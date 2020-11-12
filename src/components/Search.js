@@ -1,16 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
+
 
 const Search = () => {
-    return (
-        <div>
-            <div className="ui form">
-                <div className="field">
-                    <label>Enter search term</label>
-                    <input className="input" />
-                </div>
-            </div>
+  const [term, setTerm] = useState('');
+
+  useEffect(()=>{
+      
+  }, [term]);
+
+  return (
+    <div>
+      <div className="ui form">
+        <div className="field">
+          <label>Enter search term</label>
+          <input
+            className="input"
+            value={term}
+            onChange={(e) => {
+              setTerm(e.target.value);
+            }}
+          />
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Search;
